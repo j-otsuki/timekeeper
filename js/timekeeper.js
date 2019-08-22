@@ -157,19 +157,35 @@ $(function(){
 		changeStateClass('paused');
 	});
 
+// 	function resize_display() {
+// 		var height=$('body').height();
+// 		var width=$('body').width();
+// 		var theight=Math.min(height*3/5,width*1.95/5);
+// 		$('#time').css('top',(height-theight)/2*1.1);
+// 		$('#time').css('font-size',theight+'px');
+// 		$('#time').css('line-height',theight+'px');
+// 		var sheight=theight/6;
+// 		$('#state').css('top',height/2-theight/2-sheight/2);
+// 		$('#state').css('font-size',sheight+'px');
+// 		$('#state').css('line-height',sheight+'px');
+// 		var iheight=sheight;
+// 		$('#info').css('top',height/2+theight/2);
+// 		$('#info').css('font-size',iheight+'px');
+// 		$('#info').css('line-height',iheight+'px');
+// 	}
 	function resize_display() {
 		var height=$('body').height();
 		var width=$('body').width();
-		var theight=Math.min(height*3/5,width*1.95/5);
-		$('#time').css('top',(height-theight)/2*1.1);
+		var theight=Math.min(height*0.5,width*1.95/5);
+		$('#time').css('top',height/2-theight/4);
 		$('#time').css('font-size',theight+'px');
 		$('#time').css('line-height',theight+'px');
 		var sheight=theight/6;
-		$('#state').css('top',height/2-theight/2-sheight/2);
+		$('#state').css('top',height*0.85);
 		$('#state').css('font-size',sheight+'px');
 		$('#state').css('line-height',sheight+'px');
-		var iheight=sheight;
-		$('#info').css('top',height/2+theight/2);
+		var iheight=theight/8;
+		$('#info').css('top',height*0.1);
 		$('#info').css('font-size',iheight+'px');
 		$('#info').css('line-height',iheight+'px');
 	}
