@@ -96,7 +96,9 @@ html,body{
 
 #state{
 	font-weight: bold;
+/*
 	color: orange;
+ */
 	width:100%;
 	position: absolute;
 	text-align: center;
@@ -117,4 +119,20 @@ html,body{
 .form-control:focus{
 	background:#eee;
 	color:#111;
+}
+
+/*
+ phase-dependent config
+*/
+.phase-0{
+	color: green;
+}
+.phase-1{
+	color: green;
+}
+.phase-2{
+	color: yellow;
+}
+.phase-3{
+	color: red;
 }
