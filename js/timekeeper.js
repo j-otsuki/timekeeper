@@ -128,6 +128,7 @@ $(function(){
 	changePhaseClass('0');
 	var start_time=new Date();
 	var last_time;
+	var state_str='PRESENTATION';
 	$('.nav #start').click(function (event){
 		event.preventDefault();
 		if($('.nav li#start').hasClass('active')){
@@ -135,7 +136,7 @@ $(function(){
 		}
 		$('.nav li').removeClass('active');
 		$('.nav li#start').addClass('active');
-		$('#state').html('PRESENTATION');
+		$('#state').html(state_str);
 		changeStateClass('start');
 		start_time = new Date((new Date()).getTime() - (time_inner-(new Date('2011/1/1 00:00:00'))));
 		last_time = null;
@@ -233,16 +234,17 @@ $(function(){
 						changePhaseClass('2');
 						audio_chime2.currentTime = 0;
 						audio_chime2.play();
-						$('#state').html('DISCUSSION');
+						state_str='DISCUSSION';
 					}
 
 					if((last_time < time3 && time3 <= cur_time) || (last_time==time3 && cur_time==time3)){
 						changePhaseClass('3');
 						audio_chime3.currentTime = 0;
 						audio_chime3.play();
-						$('#state').html('TIME OVER');
+						state_str='TIME OVER';
 					}
 
+					$('#state').html(state_str);
 				}
 				last_time=cur_time;
 			}
