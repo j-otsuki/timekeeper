@@ -104,7 +104,7 @@ html,body{
 
 #info{
 	font-weight: bold;
-	color: #fc0;
+	color: lightcyan;
 	width:100%;
 	position: absolute;
 	text-align: center;
@@ -123,30 +123,30 @@ html,body{
  phase-dependent style
 */
 .phase-0{
-	color: green;
+	color: greenyellow;
 }
 .phase-1{
-	color: green;
+	color: greenyellow;
 }
 .phase-2{
-	color: yellow;
+	color: khaki;
 }
 .phase-3{
-	color: red;
+	color: crimson;
 }
 
 /*
  custum style for info
 */
 .talk-number{
-    color: #fa0;
+    color: lightskyblue;
     font-size: 80%;
 }
 .author{
     /* use default */
 }
 .title{
-    color: #fe0;
+    color: lightskyblue;
     font-size: 70%;
     font-style: italic;
 }
