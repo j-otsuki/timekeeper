@@ -114,6 +114,7 @@ $(function(){
 		$('body').addClass('phase-'+s);
 	};
 
+	var state_str='';
 	$('.nav #standby').click(function (event){
 		event.preventDefault();
 		$('.nav li').removeClass('active');
@@ -121,14 +122,15 @@ $(function(){
 		$('#state').html('STANDBY');
 		changeStateClass('standby');
 		changePhaseClass('0');
+		state_str='PRESENTATION';
 		time_inner=(new Date('2011/1/1 00:00:00'));
 		show_time();
 	});
 	changeStateClass('standby');
 	changePhaseClass('0');
+	state_str='PRESENTATION';
 	var start_time=new Date();
 	var last_time;
-	var state_str='PRESENTATION';
 	$('.nav #start').click(function (event){
 		event.preventDefault();
 		if($('.nav li#start').hasClass('active')){
