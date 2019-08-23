@@ -28,6 +28,7 @@ $(function(){
 	$('#time2').val('20:00');
 	$('#time3').val('25:00');
 	$('#info').html("Click to edit this message.");
+	$('#header').html("##");
 	function getHashParams() {
     var hashParams = {};
     var e,
@@ -49,6 +50,7 @@ $(function(){
 		if(params.t2 !== undefined) $('#time2').val(params.t2);
 		if(params.t3 !== undefined) $('#time3').val(params.t3);
 		if(params.m !== undefined) $('#info').html(params.m);
+		if(params.n !== undefined) $('#header').html(params.n);
 		if(loadedcss !== ''){
 			location.reload();
 		}
@@ -64,7 +66,8 @@ $(function(){
     var hashstr = '#t1=' + $('#time1').val()
 		+ '&t2=' + $('#time2').val()
 		+ '&t3=' + $('#time3').val()
-		+ '&m=' + encodeURIComponent($('#info').html());
+		+ '&m=' + encodeURIComponent($('#info').html())
+		+ '&n=' + encodeURIComponent($('#header').html());
 		if(loadedcss !== 'default'){
 			hashstr = hashstr + '&th=' + encodeURIComponent(loadedcss);
 		}
@@ -83,7 +86,7 @@ $(function(){
 	parseHashParams();
 	updateHash();
 
-	$('#time1,#time2,#time3,#info').change(function(){
+	$('#time1,#time2,#time3,#info,#header').change(function(){
 		updateHash();
 	});
 
@@ -188,9 +191,13 @@ $(function(){
 		$('#state').css('font-size',sheight+'px');
 		$('#state').css('line-height',sheight+'px');
 		var iheight=theight/8;
-		$('#info').css('top',height*0.1);
+		$('#info').css('top',height*0.15);
 		$('#info').css('font-size',iheight+'px');
 		$('#info').css('line-height',iheight+'px');
+		var nheight=theight/16;
+		$('#header').css('top',height*0.07);
+		$('#header').css('font-size',nheight+'px');
+		$('#header').css('line-height',nheight+'px');
 	}
 	$(window).bind("resize", resize_display);
 

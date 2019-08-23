@@ -104,7 +104,7 @@ html,body{
 
 #info{
 	font-weight: bold;
-	color: lightcyan;
+	color: white;
 	width:100%;
 	position: absolute;
 	text-align: center;
@@ -117,6 +117,13 @@ html,body{
 .form-control:focus{
 	background:#eee;
 	color:#111;
+}
+
+#header{
+	color: lightgray;
+	width:100%;
+	position: absolute;
+	margin-left: 1%;
 }
 
 /*
@@ -138,15 +145,11 @@ html,body{
 /*
  custum style for info
 */
-.talk-number{
-    color: lightskyblue;
-    font-size: 80%;
-}
 .author{
-    /* use default */
+    color: lightskyblue;
 }
 .title{
-    color: lightskyblue;
+    color: lightblue;
     font-size: 70%;
     font-style: italic;
 }
