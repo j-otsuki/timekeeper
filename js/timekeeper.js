@@ -195,7 +195,8 @@ $(function(){
 		$('#info').css('font-size',iheight+'px');
 		$('#info').css('line-height',iheight+'px');
 		var nheight=theight/16;
-		$('#header').css('top',height*0.07);
+// 		$('#header').css('top',height*0.10);
+		$('#header').css('top',60+'px');
 		$('#header').css('font-size',nheight+'px');
 		$('#header').css('line-height',nheight+'px');
 	}
